@@ -16,3 +16,6 @@ temp/log.txt
 /.idea/
 docs/.vitepress/dist
 docs/.vitepress/cache
+.yarn/install-state.gz
+src/renderer/components.d.ts
+src/renderer/auto-imports.d.ts
