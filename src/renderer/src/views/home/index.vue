@@ -7,11 +7,12 @@
   <div class="home">
     <HomeLayout>
       <template #body>
-        <router-view v-slot="{ Component, route }">
+        <router-view v-slot="{ Component }">
           <Transition
             name="page"
-            :enter-active-class="`animate__animated ${route.meta.transitionIn} animate__fast`"
-            :leave-active-class="`animate__animated ${route.meta.transitionOut} animate__fast`"
+            :enter-active-class="`router-fadeIn`"
+            :leave-active-class="`router-fadeOut`"
+            mode="out-in"
           >
             <KeepAlive exclude="list">
               <component :is="Component" />

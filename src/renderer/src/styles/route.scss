@@ -1,0 +1,26 @@
+.router-fadeIn {
+  animation: router-fade-in 0.2s ease-in-out;
+}
+
+.router-fadeOut {
+  animation: router-fade-out 0.2s ease-in-out;
+}
+@keyframes router-fade-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes router-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

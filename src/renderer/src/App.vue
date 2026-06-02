@@ -4,8 +4,8 @@
 
     <router-view v-slot="{ Component }">
       <Transition
-        :enter-active-class="`animate__animated animate__fadeIn  pagesApp`"
-        :leave-active-class="`animate__animated animate__fadeOut pagesApp`"
+        :enter-active-class="` ${route.meta.transitionIn} `"
+        :leave-active-class="` ${route.meta.transitionOut} `"
       >
         <component :is="Component" />
       </Transition>

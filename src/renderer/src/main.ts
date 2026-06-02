@@ -4,6 +4,7 @@ import 'animate.css'
 // 引入iconfont图标样式
 import './assets/icon_font/iconfont.css'
 import './assets/icon_font/iconfont.js'
+import '@renderer/styles/index.scss'
 // vue
 
 import App from './App.vue'

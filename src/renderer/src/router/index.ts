@@ -67,10 +67,6 @@ const appRouter: RouteRecordRaw[] = [
   {
     path: '/settings',
     name: 'settings',
-    meta: {
-      transitionIn: 'animate__fadeIn',
-      transitionOut: 'animate__fadeOut'
-    },
     component: () => import('@renderer/views/settings/index.vue')
   }
 ]
@@ -99,8 +95,8 @@ function setAnimate(routerObj: RouteRecordRaw[]) {
     } else {
       if (item.meta) continue
       item.meta = item.meta || {}
-      item.meta.transitionIn = 'animate__fadeInRight'
-      item.meta.transitionOut = 'animate__fadeOutLeft'
+      item.meta.transitionIn = 'router-fadeIn'
+      item.meta.transitionOut = 'router-fadeOut'
     }
   }
 }
