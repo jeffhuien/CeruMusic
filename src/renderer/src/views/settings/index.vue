@@ -1,29 +1,27 @@
 <script setup lang="ts">
-import { ref, computed, nextTick, watch } from 'vue'
-import { useRoute } from 'vue-router'
 import TitleBarControls from '@renderer/components/TitleBarControls.vue'
 import {
-  PaletteIcon,
-  ApiIcon,
-  PlayCircleIcon,
+  InfoCircleIcon,
   KeyboardIcon,
-  TreeRoundDotIcon,
   MusicIcon,
+  PaletteIcon,
+  PlayCircleIcon,
   SaveIcon,
-  InfoCircleIcon
+  TreeRoundDotIcon
 } from 'tdesign-icons-vue-next'
+import { computed, nextTick, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
 // Import Section Components
-import AppearanceSection from './sections/AppearanceSection.vue'
-import AISection from './sections/AISection.vue'
-import PlaybackSection from './sections/PlaybackSection.vue'
-import HotkeySection from './sections/HotkeySection.vue'
-import PluginSection from './sections/PluginSection.vue'
-import MusicSourceSection from './sections/MusicSourceSection.vue'
-import StorageSection from './sections/StorageSection.vue'
-import AboutSection from './sections/AboutSection.vue'
 import SettingsSearch from '@renderer/components/SettingsSearch.vue'
 import type { SearchItem } from './searchIndex'
+import AboutSection from './sections/AboutSection.vue'
+import AppearanceSection from './sections/AppearanceSection.vue'
+import HotkeySection from './sections/HotkeySection.vue'
+import MusicSourceSection from './sections/MusicSourceSection.vue'
+import PlaybackSection from './sections/PlaybackSection.vue'
+import PluginSection from './sections/PluginSection.vue'
+import StorageSection from './sections/StorageSection.vue'
 
 // 当前选择的设置分类
 const activeCategory = ref<string>('appearance')
@@ -38,12 +36,6 @@ const settingsCategories = [
     label: '外观设置',
     icon: PaletteIcon,
     description: '主题、标题栏风格等外观配置'
-  },
-  {
-    key: 'ai',
-    label: 'AI 功能',
-    icon: ApiIcon,
-    description: 'DeepSeek API 配置和 AI 相关功能'
   },
   {
     key: 'playlist',
@@ -85,7 +77,6 @@ const settingsCategories = [
 
 const sectionComponents: Record<string, any> = {
   appearance: AppearanceSection,
-  ai: AISection,
   playlist: PlaybackSection,
   hotkeys: HotkeySection,
   plugins: PluginSection,
