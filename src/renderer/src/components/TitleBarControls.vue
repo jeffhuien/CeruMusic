@@ -158,9 +158,9 @@ onBeforeUnmount(() => {
     <div class="window-controls">
       <slot name="extra" />
       <!-- 账号模块 -->
-      <div v-if="showAccount" class="account-module">
+      <!-- <div v-if="showAccount" class="account-module">
         <UserCapsule :color="color" />
-      </div>
+      </div> -->
 
       <!-- 设置按钮 -->
       <t-button
